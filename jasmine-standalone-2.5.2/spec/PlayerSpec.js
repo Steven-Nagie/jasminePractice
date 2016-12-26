@@ -15,6 +15,12 @@ describe("Player", function() {
     expect(player).toBePlaying(song);
   });
 
+  describe("When saySomething has been invoked", function() {
+    it("should say 'Here's something'", function() {
+      expect(player.saySomething("something")).toEqual("Here's something");
+    })
+  });
+
   describe("when song has been paused", function() {
     beforeEach(function() {
       player.play(song);
