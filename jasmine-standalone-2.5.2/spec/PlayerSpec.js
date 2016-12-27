@@ -16,8 +16,9 @@ describe("Player", function() {
   });
 
   describe("When saySomething has been invoked", function() {
-    it("should say 'Here's something'", function() {
-      expect(player.saySomething("something")).toEqual("Here's something");
+    var something = "something";
+    it("should say 'Here's ' + whatever something equals", function() {
+      expect(player.saySomething(something)).toEqual("Here's " + something);
     })
   });
 
